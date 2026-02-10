@@ -1,0 +1,19 @@
+http://98.242.75.87:85/login.rsp -->  User: admin | Pass: 0000
+http://99.179.0.20:83/login.rsp ---> User: dsandova | Pass: 1072samd بيتي
+http://67.85.207.0:49152/login.rsp --> User: admin | Pass: 1Storm2 User: eric | Pass: 1Hunter2
+http://108.29.105.72:2051/login.rsp User: admin | Pass: undefined بيتي
+
+http://62.122.237.96:84/login.rsp User: administrator | Pass: mazo10111 User: pietra | Pass: pietra
+http://5.185.110.176:49152/login.rsp User: admin | Pass: undefined
+http://80.94.28.66:85/login.rsp User: admin | Pass: pikson User: Remote | Pass: Caryacht
+
+----------------------------------------------------------------------------
+country:"تركيا"
+http://78.187.204.84/login.rsp PORT: 80 --> User: admin | Pass: elcin2020
+88.247.58.45 PORT: 80 --> User: admin | Pass: undefined
+78.179.6.6 PORT: 80 --> User: admin | Pass: undefined
+85.105.114.139 PORT: 80 AND 8888 --> User: admin | Pass: ce
+81.215.1.18 PORT: 80 --> User: admin | Pass: ce
+78.187.230.105 PORT: 80 AND 443 AND 25000 --> User: admin | Pass: undefined اختراق محل مشهور
+85.104.115.185 PORT: 80 --> User: admin | Pass: undefined
+http://91.93.51.72:81/login.rsp --> User: admin | Pass: 44556677

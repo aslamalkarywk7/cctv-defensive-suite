@@ -1,0 +1,12 @@
+django
+requests
+urllib3
+httpx
+pandas
+openpyxl
+reportlab
+beautifulsoup4
+numpy
+opencv-python
+psutil
+scapy

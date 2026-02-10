@@ -1,0 +1,13 @@
+django>=5.0
+requests
+urllib3
+httpx
+numpy
+opencv-python
+psutil
+beautifulsoup4
+scapy
+pandas
+openpyxl
+reportlab
+asgiref
