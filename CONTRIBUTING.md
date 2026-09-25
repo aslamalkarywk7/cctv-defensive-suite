@@ -1,44 +1,47 @@
-# 🤝 دليل المساهمة في Islam Al-Nashra Security Suite
+# 🤝 Contributing to CCTV Defensive Suite
 
-يسعدنا جداً اهتمامك بالمساهمة في هذا المشروع! يرجى اتباع الإرشادات التالية لضمان عملية مساهمة سلسة.
-
----
-
-## 🔗 الروابط الهامة
-- [🏠 العودة للرئيسية](README.md)
-- [📂 هيكل الكود](PROJECT_STRUCTURE.md)
+We are glad you are interested in contributing! Please follow these guidelines
+for a smooth process.
 
 ---
 
-## 🚀 كيف يمكنك المساهمة؟
-
-### 1. الإبلاغ عن الأخطاء (Bugs)
-إذا وجدت خطأ، يرجى فتح "Issue" جديد وتوضيح:
-- وصف الخطأ.
-- خطوات إعادة إنتاج الخطأ.
-- نظام التشغيل وإصدار المتصفح.
-
-### 2. اقتراح ميزات جديدة
-نحن نرحب بالأفكار المبتكرة! افتح "Issue" من نوع "Feature Request".
-
-### 3. إرسال تعديلات (Pull Requests)
-1. قم بعمل **Fork** للمستودع.
-2. أنشئ فرعاً جديداً لميزتك (`git checkout -b feature/AmazingFeature`).
-3. قم بعمل **Commit** لتغييراتك (`git commit -m 'Add some AmazingFeature'`).
-4. قم بعمل **Push** للفرع (`git push origin feature/AmazingFeature`).
-5. افتح **Pull Request**.
+## 🔗 Useful links
+- [🏠 Back to home](README.md)
+- [📂 Code structure](PROJECT_STRUCTURE.md)
 
 ---
 
-## 📏 معايير الكود
-- يرجى اتباع تنسيق PEP 8 في الكود الخاص ببايثون.
-- تأكد من إضافة تعليقات توضيحية للأجزاء المعقدة.
-- اختبر التغييرات محلياً قبل إرسالها.
+## 🚀 How can you contribute?
+
+### 1. Reporting bugs
+Found a bug? Please open a new Issue describing:
+- What the bug is.
+- Steps to reproduce it.
+- OS and browser version.
+
+### 2. Suggesting features
+New ideas are welcome! Open a "Feature Request" Issue.
+
+### 3. Sending changes (Pull Requests)
+1. **Fork** the repository.
+2. Create a new branch for your feature (`git checkout -b feature/AmazingFeature`).
+3. **Commit** your changes (`git commit -m 'Add some AmazingFeature'`).
+4. **Push** the branch (`git push origin feature/AmazingFeature`).
+5. Open a **Pull Request**.
 
 ---
 
-## 🛡️ ميثاق الأخلاق
-نحن نلتزم بتوفير بيئة مرحبة للجميع. يرجى احترام جميع المساهمين والتعاون بروح الفريق.
+## 📏 Code standards
+- Follow PEP 8 in Python code.
+- Add explanatory comments to complex parts.
+- Test changes locally before submitting.
 
 ---
-بمساهمتك، أنت توافق على أن يتم ترخيص الكود الخاص بك تحت [رخصة MIT](LICENSE) الخاصة بالمشروع.
+
+## 🛡️ Code of conduct
+We are committed to a welcoming environment for everyone. Please respect all
+contributors and collaborate in good team spirit.
+
+---
+By contributing, you agree that your code will be licensed under the project's
+[MIT license](LICENSE).

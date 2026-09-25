@@ -1,51 +1,51 @@
-# دليل رفع المشروع على PythonAnywhere 🚀
+# Deploying the project on PythonAnywhere 🚀
 
-هذا الدليل يشرح كيفية رفع مشروع **Islam Al-Nashra Security Suite** على منصة PythonAnywhere.
+This guide explains how to deploy **CCTV Defensive Suite** on PythonAnywhere.
 
-## 1. المعلومات التقنية المستخدمة
-*   **إصدار بايثون الموصى به**: `Python 3.10` أو `3.11`.
-*   **إطار العمل**: `Django 5.2.x`.
-*   **قاعدة البيانات**: `SQLite3` (مدمجة).
+## 1. Technical requirements
+*   **Recommended Python version**: `Python 3.10` or `3.11`.
+*   **Framework**: `Django 5.2.x`.
+*   **Database**: `SQLite3` (embedded).
 
-## 2. خطوات الرفع بالتفصيل
+## 2. Detailed deployment steps
 
-### الخطوة الأولى: رفع الكود
-1. قم بضغط ملفات المشروع (Zip) ورفعها عبر تبويب **Files** في PythonAnywhere، أو استخدم `git clone` في الـ **Bash Console**.
-2. افتح **Bash Console** وقم بفك الضغط إذا رفعت ملف Zip.
+### Step 1: Upload the code
+1. Zip the project files and upload them via the **Files** tab in PythonAnywhere, or use `git clone` in a **Bash Console**.
+2. Open a **Bash Console** and unzip if you uploaded a Zip file.
 
-### الخطوة الثانية: إنشاء البيئة الافتراضية وتنصيب المكتبات
-في الـ **Bash Console**، قم بتشغيل الأوامر التالية:
+### Step 2: Create the virtual environment and install libraries
+In the **Bash Console**, run:
 ```bash
-# إنشاء بيئة افتراضية
+# Create a virtual environment
 mkvirtualenv --python=/usr/bin/python3.10 myenv
 
-# تنصيب المكتبات المطلوبة
+# Install the required libraries
 pip install -r requirements.txt
 ```
 
-### الخطوة الثالثة: إعداد قاعدة البيانات والملفات الثابتة
+### Step 3: Set up the database and static files
 ```bash
 python manage.py migrate
 python manage.py collectstatic
 ```
 
-### الخطوة الرابعة: إعداد الـ Web App
-1. اذهب إلى تبويب **Web** في PythonAnywhere.
-2. اضغط **Add a new web app**.
-3. اختر **Manual Configuration** (لا تختر Django لأننا قمنا بإعداده يدوياً).
-4. اختر إصدار **Python 3.10**.
-5. في إعدادات الـ Web App:
-    *   **Source code**: ضع المسار الكامل لمجلد المشروع (مثلاً: `/home/yourusername/project_folder`).
-    *   **Working directory**: نفس مسار الـ Source code.
-    *   **Virtualenv**: ضع اسم البيئة التي أنشأتها (مثلاً: `myenv`).
+### Step 4: Set up the Web App
+1. Go to the **Web** tab in PythonAnywhere.
+2. Click **Add a new web app**.
+3. Choose **Manual Configuration** (not Django, since it was configured manually).
+4. Choose **Python 3.10**.
+5. In the Web App settings:
+    *   **Source code**: the full path to the project folder (e.g. `/home/yourusername/project_folder`).
+    *   **Working directory**: same as the Source code path.
+    *   **Virtualenv**: the environment you created (e.g. `myenv`).
 
-### الخطوة الخامسة: إعداد ملف WSGI
-في تبويب **Web**، اضغط على رابط **WSGI configuration file** وقم بمسح كل شيء وضع الكود التالي:
+### Step 5: Set up the WSGI file
+In the **Web** tab, click the **WSGI configuration file** link, clear everything, and paste:
 ```python
 import os
 import sys
 
-# مسار المشروع
+# Project path
 path = '/home/yourusername/project_folder'
 if path not in sys.path:
     sys.path.append(path)
@@ -55,17 +55,17 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'core.settings'
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
 ```
-*(تأكد من تغيير `yourusername` و `project_folder` للمسارات الصحيحة).*
+*(Replace `yourusername` and `project_folder` with the correct paths.)*
 
-### الخطوة السادسة: إعداد الملفات الثابتة (Static Files)
-في تبويب **Web**، انزل إلى قسم **Static files** وأضف:
+### Step 6: Set up static files
+In the **Web** tab, scroll to **Static files** and add:
 *   **URL**: `/static/`
-*   **Path**: المسار الكامل لمجلد `staticfiles` (الذي نتج عن أمر collectstatic).
+*   **Path**: the full path to the `staticfiles` folder (created by collectstatic).
 
-## 3. ملاحظات هامة جداً ⚠️
-1. **الرادار المحلي (Scanner)**: ميزة فحص الشبكة المحلية (ARP/Socket Radar) قد لا تعمل بكفاءة كاملة على السقيرفرات السحابية لأن البيئة تكون معزولة (Virtual Container)، لكن فحص الـ IPs الخارجية و الـ CVEs سيعمل بشكل ممتاز.
-2. **DEBUG**: تم إغلاق وضع المطور (`DEBUG = False`) في الإعدادات لضمان الأمان عند الرفع.
-3. **تحديث الكود**: في كل مرة تعدل فيها الكود، يجب الضغط على زر **Reload** في تبويب Web.
+## 3. Very important notes ⚠️
+1. **Local radar (Scanner)**: local-network scanning (ARP/Socket radar) may not run at full capacity on cloud servers because the environment is isolated (virtual container) — but external-IP and CVE checks work well.
+2. **DEBUG**: developer mode is off (`DEBUG = False`) in settings for safe deployment.
+3. **Code updates**: every time you change the code, press **Reload** in the Web tab.
 
 ---
-**بالتوفيق في الإطلاق!** 👨‍💻
+Good luck with the launch! 👨‍💻

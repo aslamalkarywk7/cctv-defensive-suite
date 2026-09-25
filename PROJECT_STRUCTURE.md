@@ -1,55 +1,53 @@
-# 📂 هيكل مشروع Islam Al-Nashra Security Suite
+# 📂 CCTV Defensive Suite — project structure
 
-هذا الملف يوفر نظرة شاملة على بنية الملفات والمجلدات داخل المشروع لمساعدة المطورين على فهم مكان وجود الأكواد البرمجية.
-
----
-
-## 🔗 الروابط السريعة
-- [🏠 العودة للرئيسية](README.md)
-- [📄 دليل المساهمة](CONTRIBUTING.md)
+This file gives a full overview of the files and folders to help developers
+find their way around the codebase.
 
 ---
 
-## 🏗️ المجلدات الرئيسية
-
-### 1. `core/` (إعدادات النظام)
-يحتوي على إعدادات Django الأساسية وتهيئة المسارات.
-- `settings.py`: إعدادات قواعد البيانات، التطبيقات، والملفات الثابتة.
-- `urls.py`: ملف التوجيه الرئيسي للموقع.
-- `wsgi.py` / `asgi.py`: مداخل التشغيل للسيرفر.
-
-### 2. `scanner/` (تطبيق الفحص والرادار)
-التطبيق المسؤول عن عمليات فحص الشبكة والاكتشاف.
-- `engines.py`: المحرك الأساسي لعمليات الفحص (Scanning Logic) واستخدام Scapy و Sockets.
-- `views.py`: الأكواد الخاصة بعرض واجهات الفحص والنتائج.
-- `models.py`: تعريف جداول قاعدة البيانات للأجهزة المكتشفة.
-- `templates/`: واجهات HTML الخاصة بالسكارنر.
-
-### 3. `cctv/` (تطبيق إدارة الكاميرات)
-المسؤول عن إضافة وعرض كاميرات المراقبة.
-- `views.py`: منطق جلب روابط البث وعرضها.
-- `urls.py`: مسارات روابط الكاميرات.
-- `templates/`: واجهات عرض الكاميرات.
-
-### 4. `assets/` (الملفات الثابتة)
-تحتوي على ملفات CSS، JavaScript، والصور المستخدمة في التصميم.
+## 🔗 Quick links
+- [🏠 Back to home](README.md)
+- [📄 Contributing guide](CONTRIBUTING.md)
 
 ---
 
-## 📄 الملفات الجذرية (Root Files)
-- `manage.py`: أداة إدارة مشروع Django (التشغيل، الهجرة، إنشاء الحسابات).
-- `requirements.txt`: قائمة المكتبات البرمجية المطلوبة للتشغيل.
-- `db.sqlite3`: قاعدة البيانات المحلية (تنشأ عند التشغيل).
-- `README.md`: دليل المشروع الأساسي.
-- `DEPLOY.md`: دليل رفع المشروع على السيرفر (Production).
+## 🏗️ Main folders
+
+### 1. `core/` (system settings)
+Django base settings and path configuration.
+- `settings.py`: database, apps, and static-files settings.
+- `urls.py`: the main site routing file.
+- `wsgi.py` / `asgi.py`: server entry points.
+
+### 2. `scanner/` (scanning & radar app)
+Handles network scanning and discovery.
+- `engines.py`: core scanning logic using Scapy and sockets.
+- `views.py`: code for scan interfaces and results.
+- `models.py`: database tables for discovered devices.
+- `templates/`: scanner HTML views.
+
+### 3. `cctv/` (camera management app)
+Adds and previews surveillance cameras.
+- `views.py`: stream-link fetching and preview logic.
+- `urls.py`: camera link routes.
+- `templates/`: camera view templates.
+
+### 4. `assets/` (static files)
+CSS, JavaScript, and design images.
 
 ---
 
-## 🔍 البحث السريع عن الأكواد
-- **تعديل الثيم والتصميم:** انظر في `assets/`.
-- **تعديل منطق فحص الشبكة:** انظر في `scanner/engines.py`.
-- **تعديل إعدادات السيرفر:** انظر في `core/settings.py`.
-- **تعديل واجهة المستخدم:** انظر في مجلدات `templates` داخل التطبيقات.
+## 📄 Root files
+- `manage.py`: Django management tool (run, migrate, create accounts).
+- `requirements.txt`: required libraries.
+- `db.sqlite3`: local database (created at runtime — never committed).
+- `README.md`: main project guide.
+- `DEPLOY.md`: production deployment guide.
 
 ---
-© 2026 Islam Al-Nashra Security Suite. جميع الحقوق محفوظة لغايات التطوير.
+
+## 🔍 Quick code search
+- **Theme/design changes:** look in `assets/`.
+- **Network-scan logic:** look in `scanner/engines.py`.
+- **Server settings:** look in `core/settings.py`.
+- **UI:** look in each app's `templates` folder.

@@ -1,27 +1,30 @@
-# 🛡️ Islam Al-Nashra Security Suite - CCTV & Camera Preview
+# 🛡️ CCTV Defensive Suite — Camera Inventory & Network Auditing (Django)
 
-**إسلام النشرة سكيورتي سويت** هو نظام متقدم مبني باستخدام Django لإدارة وفحص كاميرات المراقبة (CCTV) والشبكات المحلية. يهدف المشروع إلى توفير أدوات أمنية للمتخصصين لفحص الثغرات، استكشاف الشبكة، وعرض بث الكاميرات بطريقة منظمة.
-
----
-
-## 🚀 الروابط السريعة
-- [📄 دليل المساهمة (CONTRIBUTING.md)](CONTRIBUTING.md)
-- [⚖️ رخصة المشروع (LICENSE)](LICENSE)
-- [📂 هيكل المشروع التفصيلي (PROJECT_STRUCTURE.md)](PROJECT_STRUCTURE.md)
-- [🛠️ دليل الرفع (DEPLOY.md)](DEPLOY.md)
+A Django-based system for **defensive** management and review of CCTV cameras
+and local networks: device inventory, exposure review, known-vulnerability
+(CVE) lookup, and organized stream preview — built for auditors securing
+their own infrastructure.
 
 ---
 
-## ✨ المميزات الرئيسية
-- **رادار الشبكة (Network Scanner):** فحص الأجهزة المتصلة بالشبكة المحلية باستخدام ARP و Sockets.
-- **إدارة الكاميرات (CCTV Manager):** إضافة، تعديل، وعرض الكاميرات مع دعم كلمات المرور الافتراضية.
-- **فحص الثغرات (CVE Scanner):** البحث عن الثغرات المعروفة للأجهزة المكتشفة.
-- **تقارير احترافية:** توليد تقارير بصيغة PDF لنتائج الفحص.
-- **واجهة مستخدم عصرية:** متوافقة مع جميع الأجهزة (Responsive Design).
+## 🚀 Quick links
+- [📄 Contributing guide (CONTRIBUTING.md)](CONTRIBUTING.md)
+- [⚖️ License (LICENSE)](LICENSE)
+- [📂 Detailed project structure (PROJECT_STRUCTURE.md)](PROJECT_STRUCTURE.md)
+- [🛠️ Deployment guide (DEPLOY.md)](DEPLOY.md)
 
 ---
 
-## 🛠️ التقنيات المستخدمة
+## ✨ Key features
+- **Network radar:** discover devices on the local network via ARP and sockets.
+- **Camera manager:** add, edit, and preview cameras in one inventory.
+- **Vulnerability lookup:** match discovered devices against known CVEs.
+- **Professional reports:** export audit findings as PDF.
+- **Modern UI:** responsive interface for desktop and mobile.
+
+---
+
+## 🛠️ Tech stack
 - **Backend:** [Django 5.x](https://www.djangoproject.com/)
 - **Image Processing:** [OpenCV](https://opencv.org/)
 - **Networking:** [Scapy](https://scapy.net/), [Requests](https://requests.readthedocs.io/)
@@ -30,54 +33,54 @@
 
 ---
 
-## 📥 التنصيب والتشغيل
-1. **تحميل المشروع:**
+## 📥 Install & run
+1. **Clone the project:**
    ```bash
-   git clone https://github.com/your-username/camera-preview.git
-   cd camera-preview
+   git clone https://github.com/aslamalkarywk7/cctv-defensive-suite.git
+   cd cctv-defensive-suite
    ```
 
-2. **إنشاء البيئة الافتراضية:**
+2. **Create a virtual environment:**
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
-3. **تنصيب المكتبات:**
+3. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **إعداد قاعدة البيانات:**
+4. **Set up the database:**
    ```bash
    python manage.py migrate
    ```
 
-5. **تشغيل المشروع:**
+5. **Run the project:**
    ```bash
    python manage.py runserver
    ```
 
 ---
 
-## 📂 لمحة عن هيكل المشروع
-المشروع مقسم إلى تطبيقات (Apps) أساسية:
-- `core/`: الإعدادات الرئيسية للمشروع.
-- `scanner/`: يحتوي على محرك الفحص والرادار.
-- `cctv/`: وحدة إدارة ومعاينة الكاميرات.
-- `assets/`: الملفات الثابتة (Static Files).
+## 📂 Project structure at a glance
+The project is split into core apps:
+- `core/`: main project settings.
+- `scanner/`: scanning and radar engine.
+- `cctv/`: camera management and preview module.
+- `assets/`: static files.
 
-لمزيد من التفاصيل، راجع [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md).
-
----
-
-## 🤝 المساهمة
-نرحب بمساهمات الجميع! يرجى قراءة [CONTRIBUTING.md](CONTRIBUTING.md) لمعرفة كيفية البدء.
+See [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md) for details.
 
 ---
 
-## 📜 الترخيص
-هذا المشروع مرخص تحت رخصة **MIT**. راجع ملف [LICENSE](LICENSE) للمزيد من التفاصيل.
+## 🤝 Contributing
+Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) to get started.
 
 ---
-**تنبيه:** هذا المشروع للأغراض التعليمية والأمنية الأخلاقية فقط. لا نتحمل مسؤولية أي استخدام غير قانوني.
+
+## 📜 License
+This project is licensed under the **MIT** license. See [LICENSE](LICENSE) for details.
+
+---
+**Notice:** for educational and ethical defensive-security use only — audit only networks and devices you own or are authorized to test.
